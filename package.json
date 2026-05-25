@@ -1,0 +1,24 @@
+{
+	"name": "react-fundamentos",
+	"version": "1.0.0",
+	"description": "- Bootcamp de Desarrollo Web 20. KeepCoding - 25/05 - 04/06 (6 sesiones) - 19:00 - 23:00h (4 horas) - repositorio del módulo: <https://github.com/KeepCodingWeb20/react-fundamentos>",
+	"main": "index.js",
+	"workspaces": [
+		"projects/*"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gmoralrubio/react-fundamentos.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/gmoralrubio/react-fundamentos/issues"
+	},
+	"homepage": "https://github.com/gmoralrubio/react-fundamentos#readme"
+}
