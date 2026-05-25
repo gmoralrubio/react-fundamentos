@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>React sample</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    section {
+      border: 1px solid #666;
+      border-radius: .4rem;
+      padding: 16px;
+    }
+  </style>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    // Funcion que devuelve un elemento para renderizar (componente)
+
+    // Funcion asignada (expresion funcional)
+    const Section = () => {
+      // Crea elementos con React
+      const h1 = React.createElement('h1', null, 'Hola mundo')
+      const p = React.createElement('p', null, 'Esta es una prueba con React')
+      const section = React.createElement('section', null, [h1, p])
+
+      return section
+    }
+
+    const rootElement = document.querySelector('#root')
+
+
+
+    // Renderiza el section en root
+    // Llamamos a la funcion de render pasandole el componente Section(), que devuelve el section
+    ReactDOM.render(Section(), root)
+
+
+
+
+  </script>
+</body>
+</body>
+
+</html>

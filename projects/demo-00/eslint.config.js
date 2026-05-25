@@ -19,8 +19,11 @@ export default defineConfig([
 		languageOptions: {
 			globals: globals.browser,
 		},
+<<<<<<< HEAD
 		rules: {
 			'no-plusplus': 'error',
 		},
+=======
+>>>>>>> d4af7dc (feat: añadidos nuevo proyecto con React y Vite)
 	},
 ])
