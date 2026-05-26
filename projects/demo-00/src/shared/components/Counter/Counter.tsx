@@ -6,12 +6,17 @@ interface Props {
   onChange?: (delta?: number) => void
 }
 
+const INITIAL_COUNT: number = 0
+
 export const Counter: React.FC<Props> = ({ id, onChange }) => {
   // El estado es local, cada componente tiene su propio estado
   // El estado es inmutable, no se puede modificar directamente, hay que usar el setter
   // El estado es asíncrono, no se actualiza inmediatamente, sino en el siguiente renderizado
   // useState admite genericos, si inicializamos con un number, TS infiere que es number y no es necesario tiparlo
-  const [count, setCount] = useState<number>(0)
+  const [count, setCount] = useState<number>(INITIAL_COUNT)
+
+  // Se puede hacer un union al tipar useState, ya que en este caso puede ser el usuario o null en un primer momento
+  // const [value, setValue] = useState<User | null>(null);
 
   //   React usa su propio sistema de eventos que encapsulan los eventos nativos
   //   En lugar de Event -> SyntheticEvent
@@ -20,7 +25,6 @@ export const Counter: React.FC<Props> = ({ id, onChange }) => {
   //     setCount((count) => count - 1)
   //     onChange?.()
   //   }
-
   //   Tambien podemos usar el tipo especifico de react
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     // Capturamos el elemnto que dispara el evento con e.currentTarget
@@ -42,6 +46,7 @@ export const Counter: React.FC<Props> = ({ id, onChange }) => {
       >
         -
       </button>
+      <span>{count}</span>
       <button
         type="button"
         className="counter"
@@ -50,7 +55,6 @@ export const Counter: React.FC<Props> = ({ id, onChange }) => {
       >
         +
       </button>
-      <span>Change: Count is {count}</span>
     </div>
   )
 }
