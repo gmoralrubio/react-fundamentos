@@ -1,29 +1,29 @@
-import { Socials } from './shared/components/socials/Socials'
-import { Docs } from './shared/components/docs/Docs'
 import './App.css'
-import { Counter } from './shared/components/counter/Counter'
+import { Socials } from './shared/components/Socials/Socials'
+import { Docs } from './shared/components/Docs/Docs'
 import { AboutPage } from './features/about/AboutPage'
+import { CounterList } from './shared/components/CounterList/CounterList'
+// import { Counter } from './shared/components/Counter/Counter'
 
 export const App: React.FC = () => {
   const title = 'Vite + React'
   const appPath = 'src/app.tsx'
 
-  const counters = [1, 2, 3]
-
   return (
     <>
       <section id="center">
-        <AboutPage title={title} path={appPath}></AboutPage>
+        <AboutPage
+          title={title}
+          path={appPath}
+        ></AboutPage>
         <div>
           Texto desde fuera del componente pasado como <i>children</i>
           {/* Podemos poner expresiones, no cualquier tipo de bloque */}
           {/* Cuando iteramos sobre objetos, debemos añadir el key,
 		  tiene que ser único */}
-          {counters.map((id) => (
-            <Counter key={id} id={id} />
-          ))}
+          <CounterList />
           {/* Counter sin id */}
-          <Counter />
+          {/* <Counter /> */}
         </div>
       </section>
 

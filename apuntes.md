@@ -47,6 +47,25 @@
 - Se pasan de padre a hijo
 - Se pueden usar para pasar datos, funciones, etc
 
+## Hooks
+
+- Funciones que nos proporciona react
+- Nos permiten usar funcionalidades de react sin necesidad de crear una clase
+- Los hooks los pueden usar componentes funcionales
+- Deben empezar por use, para que react los reconozca como hooks
+- Se llaman dentro de los componentes, no fuera
+- No pueden ser llamados dentro de condicionales o bucles, deben estar en el nivel superior del componente
+- Siempre se ejecutan en el mismo orden, para que react pueda asociar el estado correcto a cada hook
+- Siempre se invocan desde el mismo componente o en otro hook, no pueden ser llamados desde otro componente
+- Se pueden crear nuestros propios hooks, para reutilizar lógica entre componentes
+
+### useState
+
+- Nos permite tener estado en un componente funcional
+- Devuelve un array con el estado actual y una función para actualizarlo
+- El estado puede ser de cualquier tipo: primitivo, objeto, array, etc
+- Al actualizar el estado, el componente se vuelve a renderizar con el nuevo estado, pero no se actualiza inmediatamente, sino en el siguiente renderizado, por eso es asíncrono
+
 # Screaming architecture
 
 - También se llama vertical slicing o feature-based architecture
