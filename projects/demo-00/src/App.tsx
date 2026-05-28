@@ -4,6 +4,7 @@ import { Docs } from './shared/components/Docs/Docs'
 import { AboutPage } from './features/about/AboutPage'
 import { CounterList } from './shared/components/CounterList/CounterList'
 import { Names } from './shared/components/Names/Names'
+import { Dashboard } from './features/dashboard/Dashboard'
 // import { Counter } from './shared/components/Counter/Counter'
 
 export const App: React.FC = () => {
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
         <div>
           <CounterList />
           <Names />
+          <Dashboard />
         </div>
       </section>
 
