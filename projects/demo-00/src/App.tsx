@@ -15,15 +15,11 @@ export const App: React.FC = () => {
         <AboutPage
           title={title}
           path={appPath}
-        ></AboutPage>
-        <div>
+        >
           Texto desde fuera del componente pasado como <i>children</i>
-          {/* Podemos poner expresiones, no cualquier tipo de bloque */}
-          {/* Cuando iteramos sobre objetos, debemos añadir el key,
-		  tiene que ser único */}
+        </AboutPage>
+        <div>
           <CounterList />
-          {/* Counter sin id */}
-          {/* <Counter /> */}
         </div>
       </section>
 

@@ -13,6 +13,7 @@ export const Counter: React.FC<Props> = ({ id, onChange }) => {
   // El estado es inmutable, no se puede modificar directamente, hay que usar el setter
   // El estado es asíncrono, no se actualiza inmediatamente, sino en el siguiente renderizado
   // useState admite genericos, si inicializamos con un number, TS infiere que es number y no es necesario tiparlo
+  // En state almacenamos todos los datos cuyo cambio afecta al renderizado del componente
   const [count, setCount] = useState<number>(INITIAL_COUNT)
 
   // Se puede hacer un union al tipar useState, ya que en este caso puede ser el usuario o null en un primer momento
@@ -31,7 +32,7 @@ export const Counter: React.FC<Props> = ({ id, onChange }) => {
     //  y extraemos el valor del atributo data-delta
     const delta = Number(e.currentTarget.dataset.delta)
     setCount((count) => count + delta)
-    onChange!(delta)
+    onChange?.(delta)
   }
 
   return (

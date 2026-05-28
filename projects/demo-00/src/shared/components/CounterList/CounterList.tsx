@@ -16,6 +16,9 @@ export const CounterList: React.FC = () => {
     <div className="counter-list">
       <p>Counters total: {total}</p>
       <div>
+        {/* Podemos poner expresiones, no cualquier tipo de bloque */}
+        {/* Cuando iteramos sobre objetos, debemos añadir el key,
+		  tiene que ser único */}
         {counters.map((id) => (
           <Counter
             key={id}
