@@ -12,7 +12,6 @@
 # Monorepo multipaquete
 
 - Package.json global
-<<<<<<< HEAD
 - Un repo global, varios paquetes dentro
 - Indicamos en package.json los workspaces (aquí podemos definir backend, frontend, etc)
 
@@ -85,8 +84,6 @@
         - components
         - hooks
         - services
-=======
 - Un repo global
 - varios paquetes dentro
 - indicamos en package.json los workspaces (aqui podemos definir backend, frontend, etc)
->>>>>>> d4af7dc (feat: añadidos nuevo proyecto con React y Vite)
