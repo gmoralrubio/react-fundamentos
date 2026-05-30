@@ -10,4 +10,11 @@ export default defineConfig({
 		babel({ presets: [reactCompilerPreset()] }),
 		tailwindcss(),
 	],
+	resolve: {
+		alias: {
+			'@assets': '/src/assets',
+			'@shared': '/src/shared',
+			'@features': '/src/features',
+		},
+	},
 })
