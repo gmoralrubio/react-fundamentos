@@ -7,7 +7,11 @@
 		"projects/*"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev:00": "npm run dev --workspace=prokects/demo-00",
+		"dev:01": "npm run dev --workspace=prokects/demo-01",
+		"dev:02": "npm run dev --workspace=prokects/demo-02",
+		"dev:03": "npm run dev --workspace=prokects/demo-02"
 	},
 	"repository": {
 		"type": "git",
