@@ -27,7 +27,7 @@ const getOptions = (): MenuOption[] => {
 }
 
 export const App: React.FC = () => {
-  const appTitle = 'Demo 2'
+  const appTitle = 'Demo 5'
   const subTitle = 'React - TS  Vite'
 
   const menuOptions: MenuOption[] = getOptions()
