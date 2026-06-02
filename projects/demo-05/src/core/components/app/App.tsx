@@ -1,7 +1,7 @@
 import type { MenuOption } from '@core/types/menu-option'
 import { Layout } from '@core/components/layout/layout'
 import './App.css'
-import { Router } from '@core/Router/Router'
+import { RouterLazy } from '@core/Router/RouterLazy'
 
 // Genera el menu.
 // Estas opciones deben coincidir con las que tenemos en el Router
@@ -39,7 +39,7 @@ export const App: React.FC = () => {
       menuOptions={menuOptions}
     >
       {/* invocamos el router */}
-      <Router />
+      <RouterLazy />
     </Layout>
   )
 }

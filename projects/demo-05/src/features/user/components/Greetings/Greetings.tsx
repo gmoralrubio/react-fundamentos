@@ -1,6 +1,6 @@
-import { Card } from '@shared/components/Card/Card'
 import { useState, type ChangeEvent } from 'react'
 import './Greetings.css'
+import { Card } from '@core/components/card/card'
 
 // Formularion controlado mediante state
 

@@ -1,5 +1,6 @@
-import { Card } from '@shared/components/Card/Card'
 // Ejemplo de formulario sencillo no controlado
+
+import { Card } from '@core/components/card/card'
 
 export const Login: React.FC = () => {
   // Tipamos con React.SubmitEvent<HTMLFormElement>, ya wue submitEvent no es genérico, hay que usar React.
