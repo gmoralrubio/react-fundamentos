@@ -1,3 +1,4 @@
+import { useRouter } from '@core/Router/hooks/useRouter'
 import type { ReactNode, MouseEvent } from 'react'
 
 interface Props {
@@ -6,6 +7,8 @@ interface Props {
 }
 
 export const Link: React.FC<Props> = ({ to, children }) => {
+  const currentPath = useRouter()
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     // Cambia la URL sin recargar la página

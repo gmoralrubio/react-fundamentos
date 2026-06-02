@@ -1,27 +1,14 @@
+import { useRouter } from '@core/Router/hooks/useRouter'
 import { AboutPage } from '@features/about/about-page'
 import { DashboardPage } from '@features/dashboard/dashboard-page'
 import { HomePage } from '@features/home/home-page'
 import { UserPage } from '@features/user/user-page'
-import { useEffect, useState } from 'react'
 
 // Router sin librerias, solo con React
 // Carga de forma dinámica las páginas en funcion del pathname
 export const Router: React.FC = () => {
-  // Almacenamos la ruta actual
-  const [currentPath, setCurrentPath] = useState<string>(
-    window.location.pathname
-  )
-
-  // Actualiza el path
-  const handlePopState = () => setCurrentPath(window.location.pathname)
-
-  // Registra el listener del evento y luego lo limpia
-  useEffect(() => {
-    // Escuchamos los cambios en la URL que realiza el componente Link para actualizar la ruta actual
-    window.addEventListener('popstate', handlePopState)
-
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [])
+  // Hacemos uso de useRouter, que gestiona el estado del path
+  const currentPath = useRouter()
 
   // CurrentPage es un componente, que asociaremos a la pagina correspondiente
   let CurrentPage: React.FC = () => null
