@@ -87,3 +87,13 @@
 - Un repo global
 - varios paquetes dentro
 - indicamos en package.json los workspaces (aqui podemos definir backend, frontend, etc)
+
+# React Router
+
+- Definimos el brwser router en main.tsx, envolviendo app
+- Creamos fichero rutas
+- Se puede meter el Layout.tsx en react router, para que lo palique a todas las paginas
+- Permite Lazy Loading, con Suspense
+- Para hacer lazy loading de las paginas, estas tienen que tener export default
+
+# Patrón contenedor/presentador. Rutas dinámicas

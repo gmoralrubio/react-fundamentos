@@ -1,0 +1,12 @@
+fieldset {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+input {
+	font-size: 1rem;
+	padding-inline: 0.4rem;
+	padding-block: 0.2rem;
+}
