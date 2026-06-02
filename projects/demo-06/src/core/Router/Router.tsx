@@ -1,6 +1,7 @@
 import AboutPage from '@features/about/about-page'
 import DashboardPage from '@features/dashboard/dashboard-page'
 import HomePage from '@features/home/home-page'
+import ProductsPage from '@features/Products/ProductsPage'
 import UserPage from '@features/user/user-page'
 import { Route, Routes } from 'react-router'
 
@@ -24,6 +25,10 @@ export const Router: React.FC = () => {
       <Route
         path="/user"
         element={<UserPage />}
+      />
+      <Route
+        path="/products"
+        element={<ProductsPage />}
       />
       <Route
         path="/about"

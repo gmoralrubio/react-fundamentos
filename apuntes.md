@@ -97,3 +97,6 @@
 - Para hacer lazy loading de las paginas, estas tienen que tener export default
 
 # Patrón contenedor/presentador. Rutas dinámicas
+
+- En la carpeta entities metemos la lógica de negocio, interfaces etc
+- En las entities, podemos usar Zod para validar los schemas

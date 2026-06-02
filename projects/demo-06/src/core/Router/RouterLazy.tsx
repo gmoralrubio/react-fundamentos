@@ -1,3 +1,4 @@
+
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router'
 
@@ -8,6 +9,7 @@ const DashboardPage = React.lazy(
   () => import('@features/dashboard/dashboard-page')
 )
 const UserPage = React.lazy(() => import('@features/user/user-page'))
+const ProductsPage = React.lazy(() => import('@features/Products/ProductsPage'))
 const AboutPage = React.lazy(() => import('@features/about/about-page'))
 
 // Este componente define las rutas de la aplicación
@@ -45,6 +47,14 @@ export const RouterLazy: React.FC = () => {
         element={
           <Suspense fallback={<p>Loading...</p>}>
             <UserPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/products"
+        element={
+          <Suspense fallback={<p>Loading...</p>}>
+            <ProductsPage />
           </Suspense>
         }
       />

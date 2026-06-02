@@ -23,11 +23,15 @@ const getOptions = (): MenuOption[] => {
       path: '/user',
       label: 'User',
     },
+    {
+      path: '/products',
+      label: 'Products',
+    },
   ]
 }
 
 export const App: React.FC = () => {
-  const appTitle = 'Demo 5'
+  const appTitle = 'Demo 6'
   const subTitle = 'React - TS  Vite'
 
   const menuOptions: MenuOption[] = getOptions()
